@@ -1,7 +1,7 @@
 const readline = require('readline-sync');
-const retentions = require('./retention')
+const retentions = require('./retention');
 const year = 5;
-const inflationRatePerYear = readline.question('What is the inflation rate in per year? :- ')
+const inflationRatePerYear = readline.question('What is the inflation rate in per year? :- ');
 const inflationRate = parseInt(inflationRatePerYear);
 
 let inflationMonth = 12; 
@@ -9,7 +9,7 @@ let rowM = 0;
 let columnM = 0;
 let dicOfRevenue = {};
 let amtPerSubscription = 650;
-let revenue_rate = 40
+let revenue_rate = 40;
 
 
 for(columnM; columnM<60; columnM++){
@@ -30,9 +30,9 @@ for(columnM; columnM<60; columnM++){
         numberOfSubscriber = numberOfSubscriber + retentions['listOfRetentions'][month][rowM];
         count = count + 1;
     }
-    revenueOfMoth = (numberOfSubscriber*amtPerSubscription*revenue_rate)/100;
-    revenueOfMoth = parseInt(revenueOfMoth);
-    dicOfRevenue[month] = revenueOfMoth;
+    revenueOfMonth = (numberOfSubscriber*amtPerSubscription)*revenue_rate/100;
+    revenueOfMonth = parseInt(revenueOfMonth);
+    dicOfRevenue[month] = revenueOfMonth;
 }
 
 console.log(dicOfRevenue);
