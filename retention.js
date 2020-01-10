@@ -49,7 +49,6 @@ function furtherRetentions(){
 		let fur_reten_lst = []
 		let key = str + month;
 		let start = dict[key].length
-		let num = dict[key][start-1]
 		for (start; start < total_months; start++){
 				fur_reten = parseInt(subs*retentionList[start-1]/100);
 				fur_reten_lst.push(fur_reten);
